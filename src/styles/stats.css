@@ -1,0 +1,12 @@
+.stats-wrap { padding-bottom: clamp(80px, 12vh, 130px); }
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: var(--bg-2); }
+.stat { padding: 30px 26px; border-right: 1px solid var(--line); }
+.stat:last-child { border-right: 0; }
+.stat-value { font-family: var(--display); font-weight: 800; font-size: clamp(42px, 5.6vw, 70px); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat-value sup { font-size: 0.42em; color: var(--lime); vertical-align: top; margin-left: 3px; }
+.stat p { margin-top: 10px; color: var(--muted); font-size: 14px; }
+@media (max-width: 820px) {
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: 0; }
+  .stat:nth-child(-n + 2) { border-bottom: 1px solid var(--line); }
+}

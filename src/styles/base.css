@@ -1,0 +1,86 @@
+/* Design tokens: dark teal theme matching the existing BitByte cards */
+:root {
+  --bg: #020b12;
+  --bg-2: #061521;
+  --panel: #0a1e2c;
+  --line: rgba(64, 170, 190, 0.18);
+  --line-strong: rgba(64, 170, 190, 0.38);
+  --fg: #e6f1f7;
+  --muted: #8ea6b4;
+  --blue: #1e9be0;
+  --cyan: #2fc4e8;
+  --lime: #9be15d;
+  --display: 'Sora', 'Segoe UI', system-ui, sans-serif;
+  --body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono: 'JetBrains Mono', ui-monospace, Menlo, Consolas, monospace;
+  --gutter: clamp(16px, 4vw, 48px);
+  --radius: 14px;
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body { background: var(--bg); color: var(--fg); }
+
+body {
+  margin: 0;
+  font-family: var(--body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3 { font-family: var(--display); line-height: 1.08; margin: 0; letter-spacing: -0.02em; text-wrap: balance; }
+p { margin: 0; }
+a { color: inherit; }
+img { max-width: 100%; display: block; }
+button { font: inherit; }
+
+:focus-visible { outline: 2px solid var(--lime); outline-offset: 3px; border-radius: 6px; }
+
+.container { max-width: 1180px; margin: 0 auto; padding-inline: var(--gutter); }
+
+.section { padding-block: clamp(80px, 12vh, 130px); position: relative; }
+
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--lime);
+}
+
+.section-title { font-size: clamp(32px, 5vw, 56px); margin-top: 12px; }
+.section-title span { color: var(--blue); }
+
+.section-head { display: grid; gap: 14px; max-width: 720px; margin-bottom: 52px; }
+.section-head p { color: var(--muted); font-size: 17px; }
+
+/* Buttons */
+.btn {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  background: var(--lime);
+  color: #06200c;
+  will-change: transform;
+}
+.btn.ghost { background: transparent; color: var(--fg); border: 1px solid var(--line-strong); }
+.btn span { display: inline-flex; align-items: center; gap: 8px; pointer-events: none; }
+
+/* Split text characters */
+.split-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; }
+.split-char { display: inline-block; will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+}

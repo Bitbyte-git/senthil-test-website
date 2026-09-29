@@ -1,0 +1,9 @@
+.marquee { overflow: hidden; border-bottom: 1px solid var(--line); padding-block: 26px; display: grid; gap: 12px; }
+.marquee-track { display: flex; width: max-content; animation: marquee 32s linear infinite; }
+.marquee-track.reverse { animation-direction: reverse; animation-duration: 38s; }
+.marquee:hover .marquee-track { animation-play-state: paused; }
+.marquee-track span { font-family: var(--display); font-weight: 800; font-size: clamp(30px, 5vw, 60px); white-space: nowrap; display: inline-flex; align-items: center; gap: 36px; padding-right: 36px; }
+.marquee-track span::after { content: "✦"; color: var(--lime); font-size: 0.45em; }
+.marquee-track.outline span { color: transparent; -webkit-text-stroke: 1.2px var(--muted); }
+.marquee-track.outline span::after { color: var(--blue); -webkit-text-stroke: 0; }
+@keyframes marquee { to { transform: translateX(-50%); } }

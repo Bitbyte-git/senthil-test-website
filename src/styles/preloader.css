@@ -1,0 +1,5 @@
+.preloader { position: fixed; inset: 0; z-index: 200; background: var(--bg-2); display: grid; place-items: center; align-content: center; gap: 6px; }
+.preloader-brand { font-family: var(--display); font-weight: 800; font-size: 20px; color: var(--muted); }
+.preloader-brand b { color: var(--lime); }
+.preloader-num { font-family: var(--display); font-weight: 800; font-size: clamp(72px, 15vw, 170px); font-variant-numeric: tabular-nums; line-height: 1; }
+.preloader-num b { color: var(--blue); }

@@ -1,0 +1,6 @@
+.cursor-dot, .cursor-ring { position: fixed; left: 0; top: 0; z-index: 150; pointer-events: none; border-radius: 50%; display: none; }
+.cursor-dot { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--lime); }
+.cursor-ring { width: 38px; height: 38px; margin: -19px 0 0 -19px; border: 1.5px solid rgba(155, 225, 93, 0.7); transition: width .25s, height .25s, margin .25s, background .25s; }
+.cursor-ring.is-big { width: 72px; height: 72px; margin: -36px 0 0 -36px; background: rgba(155, 225, 93, 0.1); }
+html.has-cursor .cursor-dot, html.has-cursor .cursor-ring { display: block; }
+html.has-cursor, html.has-cursor a, html.has-cursor button { cursor: none; }

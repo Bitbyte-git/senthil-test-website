@@ -1,0 +1,18 @@
+.process { border-top: 1px solid var(--line); }
+.process-card {
+  position: sticky; top: calc(96px + var(--i) * 18px);
+  min-height: clamp(260px, 42vh, 360px);
+  margin-bottom: 36px; padding: clamp(26px, 4vw, 46px);
+  border-radius: 22px; border: 1px solid var(--line-strong);
+  display: flex; flex-direction: column; justify-content: flex-end; gap: 12px;
+  overflow: hidden; transform-origin: 50% 0;
+  box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.5);
+}
+.process-card:nth-child(1) { background: linear-gradient(150deg, #0b3a55, #051824); }
+.process-card:nth-child(2) { background: linear-gradient(150deg, #0c4a44, #041a19); }
+.process-card:nth-child(3) { background: linear-gradient(150deg, #2c4a14, #0b1806); }
+.process-card:nth-child(4) { background: linear-gradient(150deg, #123f6b, #06172a); }
+.process-step { font-family: var(--mono); font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--lime); }
+.process-card h3 { font-size: clamp(32px, 5vw, 58px); }
+.process-card p { color: rgba(230, 241, 247, 0.78); max-width: 46ch; font-size: 17px; }
+.process-index { position: absolute; top: 14px; right: 26px; font-family: var(--display); font-weight: 800; font-size: clamp(80px, 12vw, 150px); color: rgba(255, 255, 255, 0.06); line-height: 1; }
